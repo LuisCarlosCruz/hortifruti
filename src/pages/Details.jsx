@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../componentes/header/Header';
 
-const ListProducts = () => {
+const Details = () => {
   return (
     <div>
       <Header />
+      <p>PAGE DETAILS</p>
     </div>
   );
 };
 
-export default ListProducts;
+export default Details;
