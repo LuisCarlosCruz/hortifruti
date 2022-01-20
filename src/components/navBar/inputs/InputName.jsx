@@ -3,7 +3,7 @@ import Context from '../../../store/Context';
 import PropTypes from 'prop-types';
 import searchFruitName from '../../../utils/searchFruitName';
 
-const InputName = ({ label, typeInput }) => {
+const InputName = ({ typeInput }) => {
   const { nameFruit, setNameFruit, setAllFruits } = useContext(Context);
 
   const handleOnChange = async ({ value }) => {
@@ -13,15 +13,24 @@ const InputName = ({ label, typeInput }) => {
   const handleOnClick = async () => {
     const fruit = await searchFruitName(nameFruit);
     const arrayFruit = Array(fruit);
-    console.log(arrayFruit);
+    // console.log(arrayFruit);
     setAllFruits(arrayFruit);
   };
 
   return (
     <div>
-      <label htmlFor="input">{label}</label>
-      <input type={typeInput} id="input" name="input" onChange={(e) => handleOnChange(e.target)} />
-      <button onClick={() => handleOnClick()}>PESQUISAR</button>
+      <form className="d-flex">
+        <input
+          className="form-control me-2"
+          type={typeInput}
+          placeholder="Name Fruit"
+          aria-label="Search"
+          onChange={(e) => handleOnChange(e.target)}
+        />
+        <button className="btn btn-outline-success" type="button" onClick={() => handleOnClick()}>
+          Search
+        </button>
+      </form>
     </div>
   );
 };
