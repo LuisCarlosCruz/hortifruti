@@ -1,13 +1,13 @@
-const searchFruitFamily = async (family) => {
+const searchFruitSelect = async (type, family) => {
   try {
-    const URL = `/family/${family}`;
+    const URL = `/${type}/${family}`;
     const resp = await fetch(URL);
     const data = await resp.json();
-    // console.log(data);
+    console.log(data);
     return data;
   } catch (erro) {
     console.error('Erro: ', erro.message);
   }
 };
 
-export default searchFruitFamily;
+export default searchFruitSelect;

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import Context from '../../../store/Context';
-import searchFruitFamily from '../../../utils/searchFruitFamily';
+import searchFruitSelect from '../../../utils/searchFruitSelect';
 
 const InputFamily = () => {
   const { setAllFruits } = useContext(Context);
 
   const handleOnChange = async ({ value }) => {
-    const fruit = await searchFruitFamily(value);
+    const fruit = await searchFruitSelect('family', value);
     console.log(fruit);
     setAllFruits(fruit);
   };
