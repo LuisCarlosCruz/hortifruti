@@ -12,7 +12,7 @@ const Header = () => {
       <h1>HORTIFRUTI</h1>
       {pathname.includes('/listProducts') && (
         <div>
-          <p>{nomeUser}</p>
+          <p>{`Welcome ${nomeUser}`}</p>
           <div>
             <img src={iconeCart} alt="icone do carrinho" />
           </div>
