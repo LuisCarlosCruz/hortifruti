@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Header from '../componentes/header/Header';
+import Header from '../components/header/Header';
 
 const Login = () => {
   const { setNomeUser, nomeUser, setPassword, password } = useContext(Context);
