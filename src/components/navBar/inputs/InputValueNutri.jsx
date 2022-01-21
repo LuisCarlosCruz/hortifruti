@@ -5,7 +5,7 @@ const InputValueNutri = ({ typeInput }) => {
   const { setNutriMin, setNutriMax } = useContext(Context);
 
   const handleOnChange = (e, type) => {
-    type === 'min' ? setNutriMin(e.value) : setNutriMax(e.value);
+    type === 'min' ? setNutriMin(+e.value + 0.1) : setNutriMax(+e.value + 0.1);
   };
 
   return (

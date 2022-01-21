@@ -3,7 +3,7 @@ const searchFruitSelect = async (type, param) => {
     const URL = `/${type}/${param}`;
     const resp = await fetch(URL);
     const data = await resp.json();
-    console.log(data, type, param);
+    // console.log(data, type, param);
     return data;
   } catch (erro) {
     console.error('Erro: ', erro.message);

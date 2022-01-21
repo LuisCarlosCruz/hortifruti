@@ -2,7 +2,7 @@ import React from 'react';
 import InputFamily from '../inputs/InputFamily';
 import InputName from '../inputs/InputName';
 import InputGenus from '../inputs/InputGenus';
-import InputOrder from '../inputs/INATIVO-InputOrder';
+import InputOrder from '../inputs/InputOrder';
 import InputNutrition from '../inputs/InputNutrition';
 import InputValueNutri from '../inputs/InputValueNutri';
 

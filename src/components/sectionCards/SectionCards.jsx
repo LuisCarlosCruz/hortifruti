@@ -1,7 +1,9 @@
 import React, { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Context from '../../store/Context';
 import searchFruitAll from '../../utils/searchFruitAll';
+
+import imgCart from '../../assets/icons/iconCart.svg';
 
 const SectionCards = () => {
   const { allFruits, setAllFruits } = useContext(Context);
@@ -10,7 +12,6 @@ const SectionCards = () => {
     const all = await searchFruitAll();
     await setAllFruits(all);
   }, []);
-  // useEffect(() => {}, [searchedFruit]);
 
   const history = useNavigate();
   const handleOnClick = ({ id }) => {
@@ -22,9 +23,13 @@ const SectionCards = () => {
       {/* <h3>LOGO SVG</h3> */}
       {allFruits &&
         allFruits.map((item) => (
-          <div key={item.id} onClick={() => handleOnClick(item)}>
-            <h4>{`Name: ${item.name}`}</h4>
-            <p>{`Family: ${item.family}`}</p>
+          <div key={item.id}>
+            <Link to={`/details/${item.id}`}>
+              <p>{item.name}</p>
+            </Link>
+            <img src={imgCart} alt="image cart" onClick={() => handleOnClick(item)} />
+
+            <br />
             <br />
           </div>
         ))}
