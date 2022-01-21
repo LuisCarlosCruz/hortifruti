@@ -3,6 +3,7 @@ import InputFamily from '../inputs/InputFamily';
 import InputName from '../inputs/InputName';
 import InputGenus from '../inputs/InputGenus';
 import InputOrder from '../inputs/INATIVO-InputOrder';
+import InputNutrition from '../inputs/InputNutrition';
 
 const Search = () => {
   return (
@@ -14,6 +15,8 @@ const Search = () => {
       <InputGenus />
       <br />
       <InputOrder />
+      <br />
+      <InputNutrition />
       <br />
     </div>
   );

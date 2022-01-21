@@ -20,13 +20,14 @@ const SectionCards = () => {
   return (
     <div>
       {/* <h3>LOGO SVG</h3> */}
-      {allFruits.map((item) => (
-        <div key={item.id} onClick={() => handleOnClick(item)}>
-          <h4>{`Name: ${item.name}`}</h4>
-          <p>{`Family: ${item.family}`}</p>
-          <br />
-        </div>
-      ))}
+      {allFruits &&
+        allFruits.map((item) => (
+          <div key={item.id} onClick={() => handleOnClick(item)}>
+            <h4>{`Name: ${item.name}`}</h4>
+            <p>{`Family: ${item.family}`}</p>
+            <br />
+          </div>
+        ))}
     </div>
   );
 };
