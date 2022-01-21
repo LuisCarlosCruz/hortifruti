@@ -4,6 +4,7 @@ import InputName from '../inputs/InputName';
 import InputGenus from '../inputs/InputGenus';
 import InputOrder from '../inputs/INATIVO-InputOrder';
 import InputNutrition from '../inputs/InputNutrition';
+import InputValueNutri from '../inputs/InputValueNutri';
 
 const Search = () => {
   return (
@@ -15,6 +16,8 @@ const Search = () => {
       <InputGenus />
       <br />
       <InputOrder />
+      <br />
+      <InputValueNutri typeInput="number" />
       <br />
       <InputNutrition />
       <br />

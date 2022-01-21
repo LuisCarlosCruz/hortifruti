@@ -8,8 +8,8 @@ const Provider = ({ children }) => {
   const [allFruits, setAllFruits] = useState([]);
   const [nameFruit, setNameFruit] = useState('');
   const [selectNutrition, setselectNutrition] = useState('');
-  const [nutriMin, setnutriMin] = useState(0);
-  const [nutriMax, setNutriMax] = useState(6);
+  const [nutriMin, setNutriMin] = useState(0);
+  const [nutriMax, setNutriMax] = useState(0);
 
   const contextValue = {
     nomeUser,
@@ -23,7 +23,7 @@ const Provider = ({ children }) => {
     selectNutrition,
     setselectNutrition,
     nutriMin,
-    setnutriMin,
+    setNutriMin,
     nutriMax,
     setNutriMax,
   };
