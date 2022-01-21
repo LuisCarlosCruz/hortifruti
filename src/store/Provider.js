@@ -7,6 +7,9 @@ const Provider = ({ children }) => {
   const [password, setPassword] = useState(null);
   const [allFruits, setAllFruits] = useState([]);
   const [nameFruit, setNameFruit] = useState('');
+  const [selectNutrition, setselectNutrition] = useState('');
+  const [nutriMin, setNutriMin] = useState(0);
+  const [nutriMax, setNutriMax] = useState(0);
 
   const contextValue = {
     nomeUser,
@@ -17,6 +20,12 @@ const Provider = ({ children }) => {
     setAllFruits,
     nameFruit,
     setNameFruit,
+    selectNutrition,
+    setselectNutrition,
+    nutriMin,
+    setNutriMin,
+    nutriMax,
+    setNutriMax,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
