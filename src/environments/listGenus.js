@@ -1,0 +1,27 @@
+const listGenus = [
+  'Ananas',
+  'Apteryx',
+  'Carica',
+  'Citrullus',
+  'Citrus',
+  'Cucumis',
+  'Diospyros',
+  'Durio',
+  'Ficus',
+  'Fragaria',
+  'Litchi',
+  'Malus',
+  'Mangifera',
+  'Musa',
+  'Passiflora',
+  'Prunus',
+  'Psidium',
+  'Pyrus',
+  'Ribes',
+  'Rubus',
+  'Solanum',
+  'Vaccinium',
+  'Vitis',
+];
+
+export default listGenus;

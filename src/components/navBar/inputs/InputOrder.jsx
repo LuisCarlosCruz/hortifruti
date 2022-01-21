@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import listFamily from '../../../environments/listFamily';
+import listOrder from '../../../environments/listOrder';
 import Context from '../../../store/Context';
 import searchFruitSelect from '../../../utils/searchFruitSelect';
 
-const InputFamily = () => {
+const InputOrder = () => {
   const { setAllFruits } = useContext(Context);
 
   const handleOnChange = async ({ value }) => {
-    const fruit = await searchFruitSelect('family', value);
+    const fruit = await searchFruitSelect('order', value);
     setAllFruits(fruit);
   };
 
@@ -19,9 +19,9 @@ const InputFamily = () => {
         defaultValue={'DEFAULT'}
         onChange={(e) => handleOnChange(e.target)}>
         <option value="DEFAULT" disabled>
-          Name of family
+          Name of order
         </option>
-        {listFamily.map((item) => (
+        {listOrder.map((item) => (
           <option value={item} key={item}>
             {item}
           </option>
@@ -31,4 +31,4 @@ const InputFamily = () => {
   );
 };
 
-export default InputFamily;
+export default InputOrder;
