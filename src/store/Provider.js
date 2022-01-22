@@ -10,6 +10,7 @@ const Provider = ({ children }) => {
   const [selectNutrition, setselectNutrition] = useState('');
   const [nutriMin, setNutriMin] = useState(0);
   const [nutriMax, setNutriMax] = useState(0);
+  const [cartList, setCartList] = useState([]);
 
   const contextValue = {
     nomeUser,
@@ -26,6 +27,8 @@ const Provider = ({ children }) => {
     setNutriMin,
     nutriMax,
     setNutriMax,
+    cartList,
+    setCartList,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

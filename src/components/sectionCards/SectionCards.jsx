@@ -1,21 +1,44 @@
 import React, { useContext, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link /* , useNavigate */ } from 'react-router-dom';
 import Context from '../../store/Context';
 import searchFruitAll from '../../utils/searchFruitAll';
 
 import imgCart from '../../assets/icons/iconCart.svg';
 
 const SectionCards = () => {
-  const { allFruits, setAllFruits } = useContext(Context);
+  const { allFruits, setAllFruits, cartList, setCartList } = useContext(Context);
 
   useEffect(async () => {
     const all = await searchFruitAll();
     await setAllFruits(all);
   }, []);
 
-  const history = useNavigate();
-  const handleOnClick = ({ id }) => {
-    history(`/details/${id}`);
+  // const history = useNavigate();
+  const handleOnClick = async ({ id }) => {
+    const all = await searchFruitAll();
+    const filterFruit = all.filter((item) => (item.id === id ? item : null));
+    const fruit = filterFruit[0];
+    fruit.qtd = 1;
+
+    const existe = cartList.some((item) => item.id === id);
+
+    if (!existe) {
+      const array = [...cartList, fruit];
+      setCartList(array);
+    }
+
+    if (existe) {
+      const addQtd = cartList.map((item) => {
+        if (item.id === id) {
+          item.qtd += 1;
+          return item;
+        }
+        return item;
+      });
+      setCartList(addQtd);
+    }
+
+    // history(`/details/${id}`);
   };
 
   return (
