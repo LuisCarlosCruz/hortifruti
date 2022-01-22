@@ -3,7 +3,7 @@ import Context from '../../store/Context';
 import iconeCart from '../../assets/icons/iconCart.png';
 import iconHome from '../../assets/icons/iconHome.png';
 import { useNavigate } from 'react-router-dom';
-//
+
 import styles from './Header.module.css';
 
 const Header = () => {
