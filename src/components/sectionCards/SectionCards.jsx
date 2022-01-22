@@ -25,6 +25,7 @@ const SectionCards = () => {
     if (!existe) {
       const array = [...cartList, fruit];
       setCartList(array);
+      alert('✔️ Fruit added to cart');
     }
 
     if (existe) {
@@ -36,6 +37,7 @@ const SectionCards = () => {
         return item;
       });
       setCartList(addQtd);
+      alert('✔️ Fruit added to cart');
     }
 
     // history(`/details/${id}`);
