@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Context from '../../store/Context';
 import iconeCart from '../../assets/icons/iconCart.png';
+import iconHome from '../../assets/icons/iconHome.png';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -14,8 +15,10 @@ const Header = () => {
 
   return (
     <div>
-      {(pathname.includes('/details') || pathname.includes('/cart')) && <p>ICONE HOME</p>}
-      <h1>HORTIFRUTI</h1>
+      {(pathname.includes('/details') || pathname.includes('/cart')) && (
+        <img src={iconHome} onClick={() => history(`/listProducts`)} />
+      )}
+      <h1 className="titleH1">HORTIFRUTI</h1>
       {pathname.includes('/listProducts') && (
         <div>
           <p>{`Welcome ${nomeUser}`}</p>

@@ -4,7 +4,6 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Login from './pages/Login';
 import ListProducts from './pages/ListProducts';
-import Details from './pages/Details';
 import Cart from './pages/Cart';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/listProducts" element={<ListProducts />} />
-          <Route path="/details/:id" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
           <Route exact path="/" element={<Login />} />
         </Routes>
