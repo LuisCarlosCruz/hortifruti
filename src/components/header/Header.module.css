@@ -2,11 +2,14 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 3vh;
+  font-family: 'Josefin Sans';
 }
 
 .titleH1 {
   color: #18a318;
   margin: 1vh;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 .divHeaderUserIconeCarrinho {
@@ -17,13 +20,13 @@
 
 .divHeaderUserIconeCarrinho p {
   display: flex;
-  align-items: flex-end;
   align-items: baseline;
+  margin-right: 20px;
 }
 
 .divHeaderUserIconeCarrinho span {
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.5rem;
   margin: 0 10px 0 10px;
   color: #18a318;
 }

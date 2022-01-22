@@ -5,6 +5,8 @@ import InputGenus from '../inputs/InputGenus';
 import InputOrder from '../inputs/InputOrder';
 import InputNutrition from '../inputs/InputNutrition';
 import InputValueNutri from '../inputs/InputValueNutri';
+import Style from './Search.module.css';
+Style;
 
 const Search = () => {
   return (
