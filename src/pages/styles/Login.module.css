@@ -1,0 +1,34 @@
+.sectionLogin {
+  display: flex;
+  justify-content: center;
+}
+
+.imagemLogin {
+  animation: aparece 3s;
+  position: relative;
+}
+
+@keyframes aparece {
+  from {top: -500px;}
+  to {top: 0px;}
+}
+
+.InputUser {
+  margin-bottom: 30px;
+}
+
+.iconesLogin {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.iconesLogin a {
+  margin-left: 10px;
+}
+
+.buttonLogin {
+  display: flex;
+  justify-content: flex-end;
+
+}
