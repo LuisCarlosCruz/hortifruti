@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
-import { Link /* , useNavigate */ } from 'react-router-dom';
 import Context from '../../store/Context';
 import searchFruitAll from '../../utils/searchFruitAll';
 
 import imgCart from '../../assets/icons/iconCart.svg';
+import imgMelon from '../../assets/icons/imgMelon.svg';
 
 const SectionCards = () => {
   const { allFruits, setAllFruits, cartList, setCartList } = useContext(Context);
@@ -13,7 +13,6 @@ const SectionCards = () => {
     await setAllFruits(all);
   }, []);
 
-  // const history = useNavigate();
   const handleOnClick = async ({ id }) => {
     const all = await searchFruitAll();
     const filterFruit = all.filter((item) => (item.id === id ? item : null));
@@ -39,19 +38,17 @@ const SectionCards = () => {
       setCartList(addQtd);
       alert('✔️ Fruit added to cart');
     }
-
-    // history(`/details/${id}`);
   };
 
   return (
     <div>
-      {/* <h3>LOGO SVG</h3> */}
+      <div>
+        <img src={imgMelon} alt="imagem mulher com melancia" />
+      </div>
       {allFruits &&
         allFruits.map((item) => (
           <div key={item.id}>
-            <Link to={`/details/${item.id}`}>
-              <p>{item.name}</p>
-            </Link>
+            <p>{item.name}</p>
             <img src={imgCart} alt="image cart" onClick={() => handleOnClick(item)} />
 
             <br />
