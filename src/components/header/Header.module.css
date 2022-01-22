@@ -1,0 +1,33 @@
+.divLogin {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+
+.titleH1 {
+  color: #18a318;
+  margin: 1vh;
+}
+
+.divHeaderUserIconeCarrinho {
+  display: flex;
+  margin: 2vh;
+  font-weight: 700;
+}
+
+.divHeaderUserIconeCarrinho p {
+  display: flex;
+  align-items: flex-end;
+  align-items: baseline;
+}
+
+.divHeaderUserIconeCarrinho span {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0 10px 0 10px;
+  color: #18a318;
+}
+
+.divHeaderUserIconeCarrinho img {
+  cursor: pointer;
+}
