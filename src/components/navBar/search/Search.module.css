@@ -1,0 +1,16 @@
+.divSearch {
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 120px;
+  padding-top: 13vh;
+}
+
+.divInputFilter {
+  width: 30%;
+  /* border: solid 2px red; */
+  height: 10vh;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

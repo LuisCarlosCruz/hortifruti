@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
-import Context from '../../../store/Context';
+import Context from '../../../../store/Context';
+
+import Style from './InputValueNutri.module.css';
+Style;
 
 const InputValueNutri = ({ typeInput }) => {
   const { setNutriMin, setNutriMax } = useContext(Context);
@@ -9,7 +12,7 @@ const InputValueNutri = ({ typeInput }) => {
   };
 
   return (
-    <div>
+    <div className={Style.divInputValueNutri}>
       <input
         className="form-control me-2"
         type={typeInput}
@@ -18,7 +21,6 @@ const InputValueNutri = ({ typeInput }) => {
         min="0"
         onChange={(e) => handleOnChange(e.target, 'min')}
       />
-      <br />
       <input
         className="form-control me-2"
         type={typeInput}

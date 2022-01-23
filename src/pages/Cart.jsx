@@ -3,6 +3,8 @@ import ButtonQtd from '../components/cart/ButtonQtd';
 import Header from '../components/header/Header';
 import Context from '../store/Context';
 
+import Style from './styles/Cart.module.css';
+
 const Cart = () => {
   const { cartList, setCartList } = useContext(Context);
 
@@ -25,39 +27,62 @@ const Cart = () => {
   return (
     <div>
       <Header />
-      {cartList.map((item) => (
-        <div key={item.id}>
-          <h2>{item.name}</h2>
-          <h4>{item.genus}</h4>
-          <h4>{item.family}</h4>
-          <h4>{item.order}</h4>
-          <div>
-            <h5>Nutritions</h5>
-            <ul>
-              <li>Carbohydrates: {item.nutritions.carbohydrates}</li>
-              <li>Protein: {item.nutritions.protein}</li>
-              <li>Fat: {item.nutritions.fat}</li>
-              <li>Sugar: {item.nutritions.calories}</li>
-            </ul>
-          </div>
-          <ButtonQtd type={'menos'} text={'-'} item={item} func={handleOnClick} />
-          <p>{item.qtd}</p>
-          <ButtonQtd type={'mais'} text={'+'} item={item} func={handleOnClick} />
-          <button
-            type="button"
-            className="btn btn-warning"
-            onClick={() => handleOnRemoveFruit(item)}>
-            Remove
-          </button>
+      <div className={Style.cart}>
+        <div className={Style.listCart}>
+          {cartList.map((item) => (
+            <div key={item.id} className={Style.fruitCard}>
+              <div className={Style.infoFruit}>
+                <div>
+                  <p>
+                    Name: <h5> {item.name}</h5>
+                  </p>
+                  <p>
+                    Genus: <h5>{item.genus}</h5>{' '}
+                  </p>
+                  <p>
+                    Family: <h5>{item.family}</h5>{' '}
+                  </p>
+                  <p>
+                    Order:
+                    <h5> {item.order}</h5>
+                  </p>
+                </div>
+                <div className={Style.nutritions}>
+                  <h5>Nutritions</h5>
+                  <ul>
+                    <li>Carbohydrates: {item.nutritions.carbohydrates}</li>
+                    <li>Protein: {item.nutritions.protein}</li>
+                    <li>Fat: {item.nutritions.fat}</li>
+                    <li>Sugar: {item.nutritions.calories}</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={Style.btnsCart}>
+                <ButtonQtd type={'menos'} text={'-'} item={item} func={handleOnClick} />
+                <p className={Style.qtdFruit}>{item.qtd}</p>
+                <ButtonQtd type={'mais'} text={'+'} item={item} func={handleOnClick} />
+                <div className={Style.btnWarning}>
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    onClick={() => handleOnRemoveFruit(item)}>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-      {cartList.length !== 0 ? (
-        <button type="button" className="btn btn-danger" onClick={() => setCartList([])}>
-          CLEAR CART
-        </button>
-      ) : (
-        <p>Your cart is empty</p>
-      )}
+        <div className={Style.clearCart}>
+          {cartList.length !== 0 ? (
+            <button type="button" className="btn btn-danger" onClick={() => setCartList([])}>
+              CLEAR CART
+            </button>
+          ) : (
+            <p className={Style.infoListEmpty}>Your cart is empty</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

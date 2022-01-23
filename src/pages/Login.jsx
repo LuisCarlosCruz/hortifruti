@@ -51,7 +51,7 @@ const Login = () => {
             <a href="https://www.google.com/" target="_blank" rel="noreferrer">
               <img src="https://img.icons8.com/color/30/000000/google-logo.png" />
             </a>
-            <a href="https://br.linkedin.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/luiscarloscruzz/" target="_blank" rel="noreferrer">
               <img src="https://img.icons8.com/color/30/000000/linkedin.png" />
             </a>
             <a href="https://www.icloud.com/" target="_blank" rel="noreferrer">

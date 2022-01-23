@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import Context from '../../../store/Context';
-import listNutrition from '../../../environments/listNutrition';
-import searchNutrition from '../../../utils/searchNutrition';
-// import searchFruitAll from '../../../utils/searchFruitAll';
+import Context from '../../../../store/Context';
+import searchNutrition from '../../../../utils/searchNutrition';
+import listNutrition from '../../../../environments/listNutrition';
+
+import Style from './InputNutrition.module.css';
+Style;
 
 const InputNutrition = () => {
   const { setselectNutrition, nutriMin, nutriMax, setAllFruits } = useContext(Context);
@@ -16,9 +18,9 @@ const InputNutrition = () => {
   };
 
   return (
-    <div>
+    <div className={Style.divBtnNutri}>
       {listNutrition.map(({ type }) => (
-        <div key={type}>
+        <div key={type} className={Style.divBtnNutri}>
           <input
             type="radio"
             onChange={(e) => handleOnChange(e.target)}
@@ -34,17 +36,4 @@ const InputNutrition = () => {
     </div>
   );
 };
-
-{
-  /* <input
-  type="radio"
-  className="btn-check"
-  name="options-outlined"
-  id="carbohydrates"
-  autoComplete="off"
-/>
-<label className="btn btn-outline-success" htmlFor="carbohydrates">
-  Carbohydrates
-</label> */
-}
 export default InputNutrition;

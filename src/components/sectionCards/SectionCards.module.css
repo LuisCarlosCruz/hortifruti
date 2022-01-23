@@ -1,0 +1,33 @@
+.divImgFruit {
+  margin-left: 15%;
+  margin-top: 10vh;
+}
+
+.divSectionFruit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 8vh 2vh 0 2vh;
+}
+
+.cardFruit {
+  border: rgb(65, 156, 5) solid 1.5px;
+  border-radius: .4rem;
+  margin: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 14vh;
+}
+
+.cardFruit:hover{
+  background-color: #158015 ;
+  color: aliceblue;
+  transition: .2s;
+}
+
+.imgFruit {
+  width: 50%;
+  cursor: pointer;
+}

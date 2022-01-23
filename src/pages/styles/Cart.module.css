@@ -1,0 +1,59 @@
+.listCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoListEmpty {
+  font-size: 2.5rem;
+  font-family: 'Josefin Sans';
+  font-weight: 600;
+  margin-left: 2vh;
+}
+
+.fruitCard {
+  border: solid 1px rgb(81, 112, 39);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2vh;
+  width: 52vh;
+  margin: 2vh;
+}
+
+.cart {
+  display: flex;
+  padding-top: 11vh;
+  justify-content: space-around;
+}
+
+.clearCart {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  margin-left: 94vh;
+}
+
+.qtdFruit {
+  display: block;
+  width: 20px;
+  margin: 1.4vh;
+  text-align: center;
+}
+
+.infoFruit {
+  display: flex;
+}
+
+.btnsCart {
+  display: flex;
+  margin-top: 1.5vh;
+}
+
+.btnWarning {
+  margin-left: 2vh;
+}
+
+.nutritions {
+  margin-left: 6vh;
+}

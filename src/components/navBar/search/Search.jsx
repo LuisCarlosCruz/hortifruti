@@ -3,26 +3,27 @@ import InputFamily from '../inputs/InputFamily';
 import InputName from '../inputs/InputName';
 import InputGenus from '../inputs/InputGenus';
 import InputOrder from '../inputs/InputOrder';
-import InputNutrition from '../inputs/InputNutrition';
-import InputValueNutri from '../inputs/InputValueNutri';
 import Style from './Search.module.css';
-Style;
+import InputValueNutri from '../inputs/inputNutrition/InputValueNutri';
+import InputNutrition from '../inputs/inputNutrition/InputNutrition';
 
 const Search = () => {
   return (
-    <div>
-      <InputName typeInput="text" />
-      <br />
-      <InputFamily />
-      <br />
-      <InputGenus />
-      <br />
-      <InputOrder />
-      <br />
-      <InputValueNutri typeInput="number" />
-      <br />
-      <InputNutrition />
-      <br />
+    <div className={Style.divSearch}>
+      <div className={Style.divInputFilter}>
+        <InputName typeInput="text" />
+        <InputFamily />
+      </div>
+
+      <div className={Style.divInputFilter}>
+        <InputGenus />
+        <InputOrder />
+      </div>
+
+      <div className={Style.divInputFilter}>
+        <InputValueNutri typeInput="number" />
+        <InputNutrition />
+      </div>
     </div>
   );
 };
