@@ -18,7 +18,11 @@ const Header = () => {
   return (
     <div className={styles.divLogin}>
       {pathname.includes('/cart') && (
-        <img src={iconHome} onClick={() => history(`/listProducts`)} />
+        <img
+          src={iconHome}
+          className={styles.imgBtnHome}
+          onClick={() => history(`/listProducts`)}
+        />
       )}
       <h1 className={styles.titleH1}>HORTIFRUTI</h1>
       {pathname.includes('/listProducts') && (

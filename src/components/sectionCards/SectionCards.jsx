@@ -5,6 +5,11 @@ import searchFruitAll from '../../utils/searchFruitAll';
 import imgCart from '../../assets/icons/iconCart.svg';
 import imgMelon from '../../assets/icons/imgMelon.svg';
 
+import Style from './SectionCards.module.css';
+
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+
 const SectionCards = () => {
   const { allFruits, setAllFruits, cartList, setCartList } = useContext(Context);
 
@@ -42,19 +47,31 @@ const SectionCards = () => {
 
   return (
     <div>
-      <div>
-        <img src={imgMelon} alt="imagem mulher com melancia" />
+      <div className={Style.divImgFruit}>
+        <img src={imgMelon} alt="imagem de melancia" />
       </div>
-      {allFruits &&
-        allFruits.map((item) => (
-          <div key={item.id}>
-            <p>{item.name}</p>
-            <img src={imgCart} alt="image cart" onClick={() => handleOnClick(item)} />
+      <div className={Style.divSectionFruit}>
+        {allFruits.length === 0 && (
+          <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
+            <CircularProgress color="success" />
+          </Stack>
+        )}
+        {allFruits &&
+          allFruits.map((item) => (
+            <div key={item.id} className={Style.cardFruit}>
+              <p>{item.name}</p>
+              <img
+                src={imgCart}
+                className={Style.imgFruit}
+                alt="image cart"
+                onClick={() => handleOnClick(item)}
+              />
 
-            <br />
-            <br />
-          </div>
-        ))}
+              <br />
+              <br />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
