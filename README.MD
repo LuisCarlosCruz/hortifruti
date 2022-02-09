@@ -19,35 +19,28 @@
 <br />
 
 ### Login:
-<br />
-![0]('')
+<img src="./src/assets/img/0.png" width="890" alt="gif-wallet-page"/>
 
 ### Dados Inválidos:
-<br />
-- IMG 1
+<img src="./src/assets/img/1.png" width="890" alt="gif-wallet-page"/>
 
 ### Principal:
-<br />
-- IMG 2
+<img src="./src/assets/img/2.png" width="890" alt="gif-wallet-page"/>
 
 ### Aplicando uma dos filtros:
-<br />
-- IMG 3
+<img src="./src/assets/img/3.png" width="890" alt="gif-wallet-page"/>
 
 ### Adicionando fruta ao carrinho:
-<br />
-- IMG 4
+<img src="./src/assets/img/4.png" width="890" alt="gif-wallet-page"/>
 
 ### Navegar ao carrinho:
-<br />
-- IMG 5
+<img src="./src/assets/img/5.png" width="890" alt="gif-wallet-page"/>
 
 ### Manipular a quantidade de cada fruta, remover ou limpar o carrinho:
-<br />
-- IMG 6
+<img src="./src/assets/img/6.png" width="890" alt="gif-wallet-page"/>
 
 
-> ### Documentação da API Fruityvice:
+> ## Documentação da API Fruityvice:
 - Serviço “web” que fornece informações sobre todos os categorias de frutas!
 - Se você quiser aprender mais informações sobre a API, observe a [documentação](https://www.fruityvice.com/doc/index.html).
 
